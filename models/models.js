@@ -48,9 +48,13 @@ const EssentialLevelSchema = new mongoose.Schema({
 
 // Special Rules Model
 const SpecialRuleSchema = new mongoose.Schema({
+  brand_id: { type: String, required: true },
   brand: { type: String, required: true },
+  category_id: { type: String, required: true },
   category: { type: String, required: true },
+  location_id: { type: String, required: true },
   location: { type: String, required: true },
+  essential_level_id: { type: String, required: true },
   essential_level: { type: String, required: true },
   pack_size: { type: Number, required: true },
   unit_of_measurement: { type: String, required: true },

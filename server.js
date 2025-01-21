@@ -22,7 +22,7 @@ mongoose.connect(process.env.DB_URI, {
   .catch(err => console.error('MongoDB connection error:', err));
 
 // Routes
-app.use('/api', routes);
+app.use('/', routes);
 
 // Start Server
 app.listen(PORT, () => console.log(`Server running on http://localhost:${PORT}`));
