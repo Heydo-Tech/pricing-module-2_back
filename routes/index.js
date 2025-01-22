@@ -29,6 +29,10 @@ const authRoutes = require('./auth');
 
 const router = express.Router();
 
+router.get('/', (req, res) => {
+  res.json({ message: 'API Working  ' });
+}   );
+
 router.use('/auth', authRoutes); // Authentication routes
 // Use authentication middleware only when necessary
 router.use('/categories', authenticateToken, categoryRoutes);
