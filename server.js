@@ -13,7 +13,7 @@ const PORT = process.env.PORT ;
 app.use(express.json());
 app.use(cors({
   origin: 'https://price-knob.apnimandi.us',
-  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   credentials: true,
 }));
 
