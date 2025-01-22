@@ -16,7 +16,7 @@ router.post('/login', async (req, res) => {
     // console.log(JWT_SECRET)
     
   const { username, password } = req.body;
-  // console.log(username);
+   console.log(username);
 
   try {
     // Check if the user exists
