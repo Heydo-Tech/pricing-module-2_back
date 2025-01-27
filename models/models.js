@@ -19,7 +19,7 @@ const CategorySchema = new mongoose.Schema({
   id: { type: String, default: () => generateId('CT'), unique: true },
   name: { type: String, required: true, unique: true },
   margin_percentage: { type: Number, required: true },
-  operation: { type: String, required: true, enum: ['+', '-'] },
+  operation: { type: String, required: true, enum: ['+', '-'],default:'+' },
 });
 
 // Brand Model
@@ -57,6 +57,7 @@ const SpecialRuleSchema = new mongoose.Schema({
   essential_level_id: { type: String, required: true },
   essential_level: { type: String, required: true },
   pack_size: { type: Number, required: true },
+  pack_size_comparison: { type: String, enum: ['<', '>', '='], required: true },
   unit_of_measurement: { type: String, required: true },
   total_margin: { type: Number, required: true },
   final_margin: { type: Number, required: true },

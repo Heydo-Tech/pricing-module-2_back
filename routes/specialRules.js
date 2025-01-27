@@ -102,6 +102,16 @@ router.put('/:id',validateMarginMiddleware, async (req, res) => {
   }
 });
 
+//delete a special rule
+router.delete('/:id', async (req, res) => {
+  try {
+    const deletedRule = await SpecialRule.findByIdAndDelete(req.params.id);
+    res.json({ message: 'Special rule deleted successfully' });
+  } catch (err) {
+    res.status(500).json({ message: 'Failed to delete rule', error: err.message });
+  }
+});
+
 module.exports = router;
 
 
