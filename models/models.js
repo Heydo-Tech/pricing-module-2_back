@@ -18,7 +18,7 @@ const UserSchema = new mongoose.Schema({
 const CategorySchema = new mongoose.Schema({
   id: { type: String, default: () => generateId('CT'), unique: true },
   name: { type: String, required: true, unique: true },
-  margin_percentage: { type: Number, required: true },
+  margin_percentage: { type: Number, required: true ,default:0},
   operation: { type: String, required: true, enum: ['+', '-'],default:'+' },
 });
 
@@ -26,7 +26,7 @@ const CategorySchema = new mongoose.Schema({
 const BrandSchema = new mongoose.Schema({
   id: { type: String, default: () => generateId('BR'), unique: true },
   name: { type: String, required: true, unique: true },
-  margin_percentage: { type: Number, required: true },
+  margin_percentage: { type: Number, required: true ,default:0},
   operation: { type: String, required: true, enum: ['+', '-'] },
 });
 
@@ -34,7 +34,7 @@ const BrandSchema = new mongoose.Schema({
 const LocationSchema = new mongoose.Schema({
   id: { type: String, default: () => generateId('LC'), unique: true },
   name: { type: String, required: true, unique: true },
-  margin_percentage: { type: Number, required: true },
+  margin_percentage: { type: Number, required: true ,default:0},
   operation: { type: String, required: true, enum: ['+', '-'] },
 });
 
@@ -42,7 +42,7 @@ const LocationSchema = new mongoose.Schema({
 const EssentialLevelSchema = new mongoose.Schema({
   id: { type: String, default: () => generateId('EL'), unique: true },
   name: { type: String, required: true, unique: true },
-  margin_percentage: { type: Number, required: true },
+  margin_percentage: { type: Number, required: true ,default:0},
   operation: { type: String, required: true, enum: ['+', '-'] },
 });
 
